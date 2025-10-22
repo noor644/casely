@@ -86,6 +86,7 @@ export default function App() {
           currentPage={page}
           cartCount={totalItems}
           onNavigate={setPage}
+          onCategoryChange={setSelectedCategory}
         />
 
         <div className="main-layout">

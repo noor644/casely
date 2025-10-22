@@ -100,6 +100,10 @@ body {
   cursor: pointer;
   flex-shrink: 0;
   margin-left: 80px;
+  transition: opacity 0.2s;
+}
+.nav__brand:hover {
+  opacity: 0.7;
 }
 .nav__title { 
   font-family: 'Cinzel Decorative', serif;
@@ -483,6 +487,7 @@ body {
   padding: 20px;
   position: sticky;
   top: 20px;
+  margin-left: -20px;
 }
 
 .sidebar__title {

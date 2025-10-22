@@ -1,9 +1,20 @@
 import React from 'react'
 
-export default function Navbar({ currentPage, cartCount, onNavigate }) {
+export default function Navbar({ currentPage, cartCount, onNavigate, onCategoryChange }) {
+  const handleLogoClick = () => {
+    onNavigate('home')
+    onCategoryChange('')
+  }
+
   return (
     <header className="nav">
-      <div className="nav__brand" onClick={() => onNavigate('home')} role="button" tabIndex={0}>
+      <div 
+        className="nav__brand" 
+        onClick={handleLogoClick} 
+        onKeyPress={(e) => e.key === 'Enter' && handleLogoClick()}
+        role="button" 
+        tabIndex={0}
+      >
         <span className="nav__title">Casely</span>
       </div>
 
